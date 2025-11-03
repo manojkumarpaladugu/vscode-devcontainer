@@ -1,7 +1,7 @@
 {
-    "name": "Ubuntu",
+    "name": "Zephyr-Ubuntu",
     "runArgs": [
-        "--name", "docker-zephyr",
+        "--name", "zephyr-ubuntu",
         "-v", "//./pipe/openssh-ssh-agent:/ssh-agent",
         "-e", "SSH_AUTH_SOCK=/ssh-agent",
         "-v", "${localWorkspaceFolder}/.devcontainer:/.devcontainer"
@@ -9,8 +9,8 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "workspaceMount": "source=/workspaces,target=/workspaces,type=bind",
-    "workspaceFolder": "/workspaces",
+    "workspaceMount": "source=/opt/workspace,target=/opt/workspace,type=bind",
+    "workspaceFolder": "/opt/workspace",
     "customizations": {
         "vscode": {
             "extensions": [
