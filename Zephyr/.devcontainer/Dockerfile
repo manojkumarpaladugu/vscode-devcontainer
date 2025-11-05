@@ -72,9 +72,12 @@ RUN apt-get install -y \
     git                \
     zip                \
     unzip              \
+    usbutils           \
 # For zephyr development
     ninja-build        \
-    qemu-system-arm
+    qemu-system-arm    \
+    openocd            \
+    picocom
 
 # Cleanup
 RUN rm -rf /var/lib/apt/lists/*

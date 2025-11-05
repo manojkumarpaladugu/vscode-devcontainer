@@ -4,7 +4,9 @@
         "--name", "zephyr-ubuntu",
         "-v", "//./pipe/openssh-ssh-agent:/ssh-agent",
         "-e", "SSH_AUTH_SOCK=/ssh-agent",
-        "-v", "${localWorkspaceFolder}/.devcontainer:/.devcontainer"
+        "-v", "${localWorkspaceFolder}/.devcontainer:/.devcontainer",
+        "--privileged",
+        "-v", "/dev:/dev"
     ],
     "build": {
         "dockerfile": "Dockerfile"
@@ -14,6 +16,7 @@
     "customizations": {
         "vscode": {
             "extensions": [
+                "marus25.cortex-debug",
                 "mhutchie.git-graph",
                 "eamodio.gitlens",
                 "twxs.cmake",
