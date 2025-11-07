@@ -73,6 +73,8 @@ RUN apt-get install -y \
     zip                \
     unzip              \
     usbutils           \
+# For ARM development
+    gcc-arm-none-eabi  \
 # For zephyr development
     ninja-build        \
     qemu-system-arm    \
